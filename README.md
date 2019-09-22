@@ -8,6 +8,8 @@
 
 `npm i czech-inflection`
 
+## [Live demo](https://erikcupal.github.io/czech-inflection/)
+
 ## Usage
 
 ```js
