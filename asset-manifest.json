@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/czech-inflection/static/css/main.b100e6da.chunk.css",
+    "main.js": "/czech-inflection/static/js/main.76cbe573.chunk.js",
+    "main.js.map": "/czech-inflection/static/js/main.76cbe573.chunk.js.map",
+    "runtime-main.js": "/czech-inflection/static/js/runtime-main.3226c448.js",
+    "runtime-main.js.map": "/czech-inflection/static/js/runtime-main.3226c448.js.map",
+    "static/css/2.23bc0b14.chunk.css": "/czech-inflection/static/css/2.23bc0b14.chunk.css",
+    "static/js/2.8b8ae70e.chunk.js": "/czech-inflection/static/js/2.8b8ae70e.chunk.js",
+    "static/js/2.8b8ae70e.chunk.js.map": "/czech-inflection/static/js/2.8b8ae70e.chunk.js.map",
+    "index.html": "/czech-inflection/index.html",
+    "precache-manifest.b92746ac37f17fa4ee6708908ab34296.js": "/czech-inflection/precache-manifest.b92746ac37f17fa4ee6708908ab34296.js",
+    "service-worker.js": "/czech-inflection/service-worker.js",
+    "static/css/2.23bc0b14.chunk.css.map": "/czech-inflection/static/css/2.23bc0b14.chunk.css.map",
+    "static/css/main.b100e6da.chunk.css.map": "/czech-inflection/static/css/main.b100e6da.chunk.css.map"
+  }
+}
