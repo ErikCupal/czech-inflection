@@ -1,15 +1,12 @@
 import { patterns, exceptions, forceM, forceF, forceS } from './constants'
 
-// /**
-//  * @param string pattern
-//  * @param string word
-//  *
-//  * @return int position from left where the pattern matched from right otherwise -1
-//  */
+/**
+ * @param pattern
+ * @param word
+ *
+ * @return int position from left where the pattern matched from right otherwise -1
+ */
 const match = (pattern, word, replacements) => {
-  // if (pattern ==='-([cčďšňřťž])') {
-    // console.log({pattern, word, sub: pattern.substring(1), reg: new RegExp(pattern.substring(1) + '$', 'iu')})
-  // }
   if (pattern.substring(0, 1) !== '-') {
     // compare if the first byte is ascii `-`
     return pattern.toLocaleLowerCase() === word.toLocaleLowerCase() ? 0 : -1
@@ -114,7 +111,6 @@ export const inflect = ({
 
 
     if (left !== -1) {
-      // console.log({ left, pattern, word, exception, lowercaseWord, gender, animate, plural, grammarCase, replacements })
       const prefix = word.substring(0, left)
 
       if (exception && grammarCase === 4) {
@@ -125,7 +121,6 @@ export const inflect = ({
       if (postfix === undefined) {
         return ''
       }
-      // console.log({postfix, replacements, pattern})
       replacements.forEach((replacement, i) => {
         postfix = postfix.replace(new RegExp(String(i), 'g'), replacement)
       })
