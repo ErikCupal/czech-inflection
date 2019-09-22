@@ -1,4 +1,4 @@
-# withDerivedProps
+# Czech inflection JavaScript library
 
 [![Build Status](https://travis-ci.org/ErikCupal/czech-inflection.svg?branch=master)](https://travis-ci.org/ErikCupal/czech-inflection)
 
