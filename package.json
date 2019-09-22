@@ -1,0 +1,35 @@
+{
+  "name": "czech-inflection",
+  "version": "1.0.0",
+  "description": "Inflection of Czech words",
+  "main": "lib/index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "jest ./src",
+    "build": "rm -rf ./lib && ./node_modules/.bin/babel -e 0 ./src -d ./lib",
+    "prepare": "npm test && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ErikCupal/czech-inflection"
+  },
+  "keywords": [
+    "czech",
+    "inflection",
+    "javascript",
+    "library"
+  ],
+  "license": "LGPL v2.1",
+  "bugs": {
+    "url": "https://github.com/ErikCupal/czech-inflection/issues"
+  },
+  "homepage": "https://github.com/ErikCupal/czech-inflection#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.4",
+    "@babel/preset-env": "^7.5.4",
+    "@types/jest": "^24.0.15",
+    "babel-loader": "^8.0.6",
+    "jest": "^24.8.0"
+  }
+}
