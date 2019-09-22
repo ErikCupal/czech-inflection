@@ -25,3 +25,4 @@ console.log(inflect({ word: 'hrad', grammarCase: 6 }))
 console.log(inflect({ word: 'hrad', grammarCase: 6, plural: true }))
 // hradech
 ```
+
