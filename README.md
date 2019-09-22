@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/ErikCupal/czech-inflection.svg?branch=master)](https://travis-ci.org/ErikCupal/czech-inflection)
 
-Czech-inflection is JavaScript library for inflecting Czech words. It is a port [inflection](https://github.com/heureka/inflection) library.
+`czech-inflection` is JavaScript library for inflecting Czech words. It is a port [inflection](https://github.com/heureka/inflection) library.
 
 ## Instalation
 
