@@ -1,28 +1,13 @@
-# Czech inflection JavaScript library
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-[![Build Status](https://travis-ci.org/ErikCupal/czech-inflection.svg?branch=master)](https://travis-ci.org/ErikCupal/czech-inflection)
+## Available Scripts
 
-`czech-inflection` is JavaScript library for inflecting Czech words. It is a port of PHP [inflection](https://github.com/heureka/inflection) library.
+In the project directory, you can run:
 
-## Instalation
+### `npm start`
 
-`npm i czech-inflection`
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## Usage
-
-```js
-import inflect from 'czech-inflection'
-
-console.log(inflect({ word: 'Tomáš', grammarCase: 3, animate: true }))
-// Tomášovi
-
-console.log(inflect({ word: 'Tomáš', grammarCase: 3, animate: true, plural: true }))
-// Tomášům
-
-console.log(inflect({ word: 'hrad', grammarCase: 6 }))
-// hradě
-
-console.log(inflect({ word: 'hrad', grammarCase: 6, plural: true }))
-// hradech
-```
-
+The page will reload if you make edits.<br>
+You will also see any lint errors in the console.

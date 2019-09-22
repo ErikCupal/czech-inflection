@@ -1,35 +1,39 @@
 {
-  "name": "czech-inflection",
-  "version": "1.0.0",
-  "description": "Inflection of Czech words",
-  "main": "lib/index.js",
-  "types": "index.d.ts",
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "homepage" : "http://ErikCupal.github.io/czech-inflection",
+  "dependencies": {
+    "@emotion/core": "^10.0.17",
+    "@emotion/styled": "^10.0.17",
+    "czech-inflection": "^1.0.0",
+    "emotion": "^10.0.17",
+    "ramda": "^0.26.1",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-scripts": "3.1.2",
+    "recompose": "^0.30.0",
+    "rmwc": "^5.7.1"
+  },
   "scripts": {
-    "test": "jest ./src",
-    "build": "rm -rf ./lib && ./node_modules/.bin/babel -e 0 ./src -d ./lib",
-    "prepare": "npm test && npm run build"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ErikCupal/czech-inflection"
+  "eslintConfig": {
+    "extends": "react-app"
   },
-  "keywords": [
-    "czech",
-    "inflection",
-    "javascript",
-    "library"
-  ],
-  "license": "LGPL v2.1",
-  "bugs": {
-    "url": "https://github.com/ErikCupal/czech-inflection/issues"
-  },
-  "homepage": "https://github.com/ErikCupal/czech-inflection#readme",
-  "devDependencies": {
-    "@babel/cli": "^7.5.0",
-    "@babel/core": "^7.5.4",
-    "@babel/preset-env": "^7.5.4",
-    "@types/jest": "^24.0.15",
-    "babel-loader": "^8.0.6",
-    "jest": "^24.8.0"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
