@@ -1,6 +1,6 @@
 {
   "name": "czech-inflection",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Inflection of Czech words",
   "main": "lib/index.js",
   "types": "index.d.ts",

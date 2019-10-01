@@ -371,4 +371,28 @@ describe('inflect', () => {
       ],
     })
   })
+
+  it('inflects Soňa correctly', () => {
+    const WORD = 'Soňa'
+    testInflections({
+      word: WORD,
+      plural: false,
+      animate: true,
+      expectedInflections: ['Soňa', 'Soni', 'Soně', 'Soňu', 'Soňo', 'Soně', 'Soňou'],
+    })
+    testInflections({
+      word: WORD,
+      plural: true,
+      animate: true,
+      expectedInflections: [
+        'Soni',
+        'Soň',
+        'Soňám',
+        'Soni',
+        'Soni',
+        'Soňách',
+        'Soňami',
+      ],
+    })
+  })
 })
