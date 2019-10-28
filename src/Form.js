@@ -28,6 +28,7 @@ const StyledForm = styled.div`
 `
 
 const StyledInput = styled(TextField)`
+  margin-top: 20px;
   &.mdc-text-field:not(.mdc-text-field--disabled) {
     ${p => (p.bgColor ? `background-color: ${p.bgColor};` : '')}
   }
@@ -39,7 +40,7 @@ const StyledInput = styled(TextField)`
 `
 
 const StyledCheckbox = styled(Checkbox)`
-  margin-top: 10px;
+  margin-top: 30px;
 `
 
 const StyledTitle = styled(Typography)`
@@ -88,7 +89,14 @@ const StyledTable = styled.div`
   width: 100%;
 `
 
-const Form = ({ text, setText, animate, setAnimate }) => {
+const StyledGenderInfo = styled.span`
+  margin-top: 10px;
+  font-size: 14px;
+`
+
+const Form = ({ text, setText, animate, setAnimate, gender, setGender }) => {
+  const normalizedGender = gender ? gender : undefined
+
   return (
     <StyledContainer
       {...{
@@ -108,6 +116,16 @@ const Form = ({ text, setText, animate, setAnimate }) => {
             onChange: e => setText(e.target.value),
           }}
         />
+        <StyledInput
+          {...{
+            label: 'Gender - write m or f',
+            value: gender,
+            onChange: e => setGender(e.target.value),
+          }}
+        />
+        <StyledGenderInfo>
+          Gender is necessary for correct nickname inflections
+        </StyledGenderInfo>
         <StyledCheckbox
           {...{
             label: 'Animate',
@@ -129,23 +147,128 @@ const Form = ({ text, setText, animate, setAnimate }) => {
         </StyledCases>
         <StyledSingular>
           <StyledSectionTitle>Singular</StyledSectionTitle>
-          <StyledCell>{inflect({word: text, grammarCase:1, animate })}</StyledCell>
-          <StyledCell>{inflect({word: text, grammarCase:2, animate })}</StyledCell>
-          <StyledCell>{inflect({word: text, grammarCase:3, animate })}</StyledCell>
-          <StyledCell>{inflect({word: text, grammarCase:4, animate })}</StyledCell>
-          <StyledCell>{inflect({word: text, grammarCase:5, animate })}</StyledCell>
-          <StyledCell>{inflect({word: text, grammarCase:6, animate })}</StyledCell>
-          <StyledCell>{inflect({word: text, grammarCase:7, animate })}</StyledCell>
+          <StyledCell>
+            {inflect({
+              word: text,
+              grammarCase: 1,
+              animate,
+              gender: normalizedGender,
+            })}
+          </StyledCell>
+          <StyledCell>
+            {inflect({
+              word: text,
+              grammarCase: 2,
+              animate,
+              gender: normalizedGender,
+            })}
+          </StyledCell>
+          <StyledCell>
+            {inflect({
+              word: text,
+              grammarCase: 3,
+              animate,
+              gender: normalizedGender,
+            })}
+          </StyledCell>
+          <StyledCell>
+            {inflect({
+              word: text,
+              grammarCase: 4,
+              animate,
+              gender: normalizedGender,
+            })}
+          </StyledCell>
+          <StyledCell>
+            {inflect({
+              word: text,
+              grammarCase: 5,
+              animate,
+              gender: normalizedGender,
+            })}
+          </StyledCell>
+          <StyledCell>
+            {inflect({
+              word: text,
+              grammarCase: 6,
+              animate,
+              gender: normalizedGender,
+            })}
+          </StyledCell>
+          <StyledCell>
+            {inflect({
+              word: text,
+              grammarCase: 7,
+              animate,
+              gender: normalizedGender,
+            })}
+          </StyledCell>
         </StyledSingular>
         <StyledSingular>
           <StyledSectionTitle>Plural</StyledSectionTitle>
-          <StyledCell>{inflect({word: text, grammarCase:1, animate, plural: true })}</StyledCell>
-          <StyledCell>{inflect({word: text, grammarCase:2, animate, plural: true })}</StyledCell>
-          <StyledCell>{inflect({word: text, grammarCase:3, animate, plural: true })}</StyledCell>
-          <StyledCell>{inflect({word: text, grammarCase:4, animate, plural: true })}</StyledCell>
-          <StyledCell>{inflect({word: text, grammarCase:5, animate, plural: true })}</StyledCell>
-          <StyledCell>{inflect({word: text, grammarCase:6, animate, plural: true })}</StyledCell>
-          <StyledCell>{inflect({word: text, grammarCase:7, animate, plural: true })}</StyledCell>
+          <StyledCell>
+            {inflect({
+              word: text,
+              grammarCase: 1,
+              animate,
+              gender: normalizedGender,
+              plural: true,
+            })}
+          </StyledCell>
+          <StyledCell>
+            {inflect({
+              word: text,
+              grammarCase: 2,
+              animate,
+              gender: normalizedGender,
+              plural: true,
+            })}
+          </StyledCell>
+          <StyledCell>
+            {inflect({
+              word: text,
+              grammarCase: 3,
+              animate,
+              gender: normalizedGender,
+              plural: true,
+            })}
+          </StyledCell>
+          <StyledCell>
+            {inflect({
+              word: text,
+              grammarCase: 4,
+              animate,
+              gender: normalizedGender,
+              plural: true,
+            })}
+          </StyledCell>
+          <StyledCell>
+            {inflect({
+              word: text,
+              grammarCase: 5,
+              animate,
+              gender: normalizedGender,
+              plural: true,
+            })}
+          </StyledCell>
+          <StyledCell>
+            {inflect({
+              word: text,
+              grammarCase: 6,
+              animate,
+              gender: normalizedGender,
+              plural: true,
+            })}
+          </StyledCell>
+          <StyledCell>
+            {inflect({
+              word: text,
+              grammarCase: 7,
+              animate,
+              gender: normalizedGender,
+              plural: true,
+            })}
+          </StyledCell>
         </StyledSingular>
       </StyledTable>
     </StyledContainer>
@@ -155,4 +278,5 @@ const Form = ({ text, setText, animate, setAnimate }) => {
 export default compose(
   withState('text', 'setText', 'Tomáš'),
   withState('animate', 'setAnimate', true),
+  withState('gender', 'setGender', ''),
 )(Form)
