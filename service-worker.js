@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/czech-inflection/precache-manifest.b92746ac37f17fa4ee6708908ab34296.js"
+  "/czech-inflection/precache-manifest.4eee9982e697900eeec3b25962b670cc.js"
 );
 
 self.addEventListener('message', (event) => {

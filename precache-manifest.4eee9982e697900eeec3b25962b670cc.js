@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "31daf1eef3d1739b4c41a4c8289b226b",
+    "revision": "fd500ed1bebcb2dfe78316c0c5f37156",
     "url": "/czech-inflection/index.html"
   },
   {
-    "revision": "c6cc9dffb913b87fb165",
+    "revision": "8b352a54c19a0b83fbc8",
     "url": "/czech-inflection/static/css/2.23bc0b14.chunk.css"
   },
   {
-    "revision": "44507553db04f6c84df1",
+    "revision": "abed9fd8c64350b41b74",
     "url": "/czech-inflection/static/css/main.b100e6da.chunk.css"
   },
   {
-    "revision": "c6cc9dffb913b87fb165",
-    "url": "/czech-inflection/static/js/2.8b8ae70e.chunk.js"
+    "revision": "8b352a54c19a0b83fbc8",
+    "url": "/czech-inflection/static/js/2.40f628fb.chunk.js"
   },
   {
-    "revision": "44507553db04f6c84df1",
-    "url": "/czech-inflection/static/js/main.76cbe573.chunk.js"
+    "revision": "abed9fd8c64350b41b74",
+    "url": "/czech-inflection/static/js/main.c0d81c23.chunk.js"
   },
   {
     "revision": "da307b07099d73d1fa5f",
