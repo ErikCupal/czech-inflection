@@ -21,6 +21,10 @@ console.log(inflect({ word: 'Tomáš', grammarCase: 3, animate: true }))
 console.log(inflect({ word: 'Tomáš', grammarCase: 3, animate: true, plural: true }))
 // Tomášům
 
+console.log(inflect({ word: 'Honza', grammarCase: 3, animate: true, gender: 'm' }))
+// It's necessary to specify gender for some names/nicknames to inflect them correctly
+// Honzovi
+
 console.log(inflect({ word: 'hrad', grammarCase: 6 }))
 // hradě
 

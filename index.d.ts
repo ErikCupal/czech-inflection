@@ -3,6 +3,7 @@ interface InflectOptions {
   grammarCase: 1 | 2 | 3 | 4 | 5 | 6 | 7
   plural?: boolean
   animate?: boolean
+  gender?: 'm' | 'f'
 }
 
 /**

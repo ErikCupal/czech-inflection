@@ -7,9 +7,12 @@ const testInflections = ({
   plural = false,
   animate = false,
   expectedInflections,
+  gender = undefined,
 }) => {
   expect(
-    CASES.map(grammarCase => inflect({ word, grammarCase, plural, animate })),
+    CASES.map(grammarCase =>
+      inflect({ word, grammarCase, plural, animate, gender }),
+    ),
   ).toEqual(expectedInflections)
 }
 
@@ -42,6 +45,108 @@ describe('inflect', () => {
         'Tomášové',
         'Tomáších',
         'Tomáši',
+      ],
+    })
+  })
+
+  fit('inflects Honza correctly', () => {
+    const WORD = 'Honza'
+    testInflections({
+      word: WORD,
+      plural: false,
+      animate: true,
+      gender: 'm',
+      expectedInflections: [
+        'Honza',
+        'Honzy',
+        'Honzovi',
+        'Honzu',
+        'Honzo',
+        'Honzovi',
+        'Honzou',
+      ],
+    })
+    testInflections({
+      word: WORD,
+      plural: true,
+      animate: true,
+      gender: 'm',
+      expectedInflections: [
+        'Honzové',
+        'Honzů',
+        'Honzům',
+        'Honzy',
+        'Honzové',
+        'Honzech',
+        'Honzy',
+      ],
+    })
+  })
+
+  fit('inflects Dáda as masculine correctly', () => {
+    const WORD = 'Dáda'
+    testInflections({
+      word: WORD,
+      plural: false,
+      animate: true,
+      gender: 'm',
+      expectedInflections: [
+        'Dáda',
+        'Dády',
+        'Dádovi',
+        'Dádu',
+        'Dádo',
+        'Dádovi',
+        'Dádou',
+      ],
+    })
+    testInflections({
+      word: WORD,
+      plural: true,
+      animate: true,
+      gender: 'm',
+      expectedInflections: [
+        'Dádové',
+        'Dádů',
+        'Dádům',
+        'Dády',
+        'Dádové',
+        'Dádech',
+        'Dády',
+      ],
+    })
+  })
+
+  fit('inflects Dáda as feminine correctly', () => {
+    const WORD = 'Dáda'
+    testInflections({
+      word: WORD,
+      plural: false,
+      animate: true,
+      gender: 'f',
+      expectedInflections: [
+        'Dáda',
+        'Dády',
+        'Dádě',
+        'Dádu',
+        'Dádo',
+        'Dádě',
+        'Dádou',
+      ],
+    })
+    testInflections({
+      word: WORD,
+      plural: true,
+      animate: true,
+      gender: 'f',
+      expectedInflections: [
+        'Dády',
+        'Dád',
+        'Dádám',
+        'Dády',
+        'Dády',
+        'Dádách',
+        'Dádami',
       ],
     })
   })

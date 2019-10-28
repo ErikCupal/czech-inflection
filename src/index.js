@@ -65,6 +65,7 @@ export const inflect = ({
   grammarCase,
   plural = false,
   animate = false,
+  gender,
 }) => {
   const originalWord = word
   if (plural) {
@@ -75,21 +76,23 @@ export const inflect = ({
     return word
   }
 
-  let gender
-
   const firstLetter = word.substring(0, 1)
   const isUpperCase = firstLetter.toLocaleUpperCase() === firstLetter
 
   word = breakAccents(word)
   const lowercaseWord = word.toLocaleLowerCase()
 
-  if (forceM.includes(lowercaseWord)) {
-    gender = 'm'
-  } else if (forceF.includes(lowercaseWord)) {
-    gender = 'f'
-  } else if (forceS.includes(lowercaseWord)) {
-    gender = 's'
+  if (!gender) {
+    if (forceM.includes(lowercaseWord)) {
+      gender = 'm'
+    } else if (forceF.includes(lowercaseWord)) {
+      gender = 'f'
+    } else if (forceS.includes(lowercaseWord)) {
+      gender = 's'
+    }
   }
+
+  console.log({ gender })
 
   let exception
   for (const e of exceptions) {
@@ -99,7 +102,6 @@ export const inflect = ({
     }
   }
 
-
   let replacements = []
   for (const pattern of patterns) {
     if (gender && pattern[0] !== gender) {
@@ -108,7 +110,6 @@ export const inflect = ({
 
     word = exception ? exception[1] : word
     const left = match(pattern[1], word, replacements)
-
 
     if (left !== -1) {
       const prefix = word.substring(0, left)
@@ -136,7 +137,8 @@ export const inflect = ({
 
       let result = fixAccents(prefix + postfix)
       if (isUpperCase) {
-        result = result.substring(0, 1).toLocaleUpperCase() + result.substring(1)
+        result =
+          result.substring(0, 1).toLocaleUpperCase() + result.substring(1)
       }
       return result
     }
